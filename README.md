@@ -1,12 +1,12 @@
-# 🧩 SaaS Control Center
+# 📊 Admin Dashboard App
 
-An enterprise-style admin dashboard built with **Angular** and **Azure**, designed to manage users, roles, and key metrics for a SaaS platform. Includes role-based access, charts, forms, and structured component architecture.
+An enterprise-style dashboard application built with **Angular** and **Angular Material**, featuring role-based access, reactive forms, charts, and state management. Ideal for demonstrating UI architecture, stateful logic, and scalable component design within a corporate or admin-style interface.
 
 ## 🛠 Tech Stack
 
 - **Frontend:** Angular, Angular Router, Angular Reactive Forms
-- **Styling:** Tailwind CSS (or SCSS)
-- **State Management:** Services with BehaviorSubjects (MVP)
+- **Styling:** Tailwind CSS *(or SCSS if preferred)*
+- **State Management:** Angular Services with BehaviorSubjects (MVP)
 - **Auth:** Simple local auth or Azure AD B2C (optional)
 - **Charts:** ng2-charts (Chart.js wrapper)
 - **Backend (Optional):** Azure Functions for dynamic features
@@ -14,56 +14,63 @@ An enterprise-style admin dashboard built with **Angular** and **Azure**, design
 
 ## 🚀 Features
 
-| Feature                | Description                                                     |
-|------------------------|-----------------------------------------------------------------|
-| 🔐 Role-Based Access    | Admin vs User views using route guards                          |
-| 👥 User Management      | CRUD operations on a user table                                 |
-| 📊 Dashboard Charts     | Line/bar/pie charts using dummy or real data                    |
-| 🧾 Reactive Forms        | Validated forms for adding/editing users                        |
-| 📦 Shared State          | Lightweight state via services and BehaviorSubjects            |
-| ☁️ Azure Deployment      | Hosted using Azure Static Web Apps and optionally Functions     |
+| Feature                     | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| 🔐 Login Form               | Basic login form (hardcoded or Azure B2C optional integration)             |
+| 🧭 Role-Based Routing        | Angular Router separates admin/user views with route guards                |
+| 👥 User Management Table    | Full CRUD with Angular Material Table and Dialogs                          |
+| 📊 Dashboard Charts         | Visualize sample metrics using `ng2-charts`                                |
+| 📝 Reactive Forms           | Angular Reactive Forms with dynamic validation                             |
+| 🔄 Shared State             | Global state managed via Services and BehaviorSubjects                     |
+| ⚙️ Optional Backend          | Azure Functions for APIs or server-side logic                              |
+| ☁️ Azure Deployment         | Hosted via Azure Static Web Apps                                           |
 
 ## 📦 Folder Structure
 
-saas-control-center/  
+admin-dashboard-app/  
 ├── src/  
 │   ├── app/  
-│   │   ├── components/  
-│   │   ├── pages/  
+│   │   ├── auth/  
+│   │   ├── admin/  
+│   │   ├── user/  
 │   │   ├── services/  
-│   │   ├── guards/  
-│   │   ├── models/  
-│   │   └── app.module.ts  
-│   ├── assets/  
-│   └── environments/  
+│   │   └── shared/  
+│   └── assets/  
+├── environments/  
 ├── angular.json  
-├── README.md  
-└── ...  
+├── tailwind.config.js *(or styles.scss)*  
+├── .env  
+└── README.md  
 
 ## ⚙️ Setup Instructions
 
 1. **Clone the repo**  
-   `git clone https://github.com/yourusername/saas-control-center.git && cd saas-control-center`
+   `git clone https://github.com/yourusername/admin-dashboard-app.git && cd admin-dashboard-app`
 
 2. **Install dependencies**  
    `npm install`
 
-3. **Run the app locally**  
+3. **Start dev server**  
    `ng serve`
 
-4. **Deploy to Azure**  
-   Follow Azure Static Web Apps CLI or GitHub Actions setup.
+4. **Configure Azure (Optional)**  
+   - Azure AD B2C settings for login  
+   - Azure Functions for backend APIs
 
-## 🌐 Optional Azure Services
+5. **Deploy to Azure**  
+   Use Azure Static Web Apps for deployment. Connect repository and follow portal instructions.
 
-- **Azure AD B2C** — for enterprise-ready authentication  
-- **Azure Functions** — to handle real-time chart data or event logs  
-- **Azure Monitor** — for app telemetry and health tracking  
+## 🧪 Optional Enhancements
+
+- Full auth integration with Azure AD B2C
+- Backend API routes with Azure Functions
+- Dark mode and theme toggling
+- Export user reports as CSV/PDF
 
 ## 📸 Screenshots
 
-_Add screenshots for the dashboard, charts, and user management pages._
+_Add screenshots of login, admin dashboard, and user table views._
 
 ## 📄 License
 
-MIT — customize and expand as needed.
+MIT — use freely for learning, enterprise demos, or production scaffolds.
