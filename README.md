@@ -1,76 +1,94 @@
 # 📊 Admin Dashboard App
 
-An enterprise-style dashboard application built with **Angular** and **Angular Material**, featuring role-based access, reactive forms, charts, and state management. Ideal for demonstrating UI architecture, stateful logic, and scalable component design within a corporate or admin-style interface.
+A modern, enterprise-style admin dashboard built with **React** and styled using **ShadCN UI** (Tailwind + Radix UI). This app features role-based views, reactive forms, CRUD functionality, charts, and centralized state management—perfect for showcasing scalable frontend architecture.
+
+---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** Angular, Angular Router, Angular Reactive Forms
-- **Styling:** Tailwind CSS *(or SCSS if preferred)*
-- **State Management:** Angular Services with BehaviorSubjects (MVP)
+- **Frontend:** React, React Router, React Hook Form
+- **Styling:** ShadCN UI (Tailwind CSS + Radix UI)
+- **State Management:** Context API or Zustand (BehaviorSubject-like)
 - **Auth:** Simple local auth or Azure AD B2C (optional)
-- **Charts:** ng2-charts (Chart.js wrapper)
-- **Backend (Optional):** Azure Functions for dynamic features
+- **Charts:** React Chart.js or Recharts
+- **Backend (Optional):** Azure Functions
 - **Hosting:** Azure Static Web Apps
+
+---
 
 ## 🚀 Features
 
-| Feature                     | Description                                                                 |
-|-----------------------------|-----------------------------------------------------------------------------|
-| 🔐 Login Form               | Basic login form (hardcoded or Azure B2C optional integration)             |
-| 🧭 Role-Based Routing        | Angular Router separates admin/user views with route guards                |
-| 👥 User Management Table    | Full CRUD with Angular Material Table and Dialogs                          |
-| 📊 Dashboard Charts         | Visualize sample metrics using `ng2-charts`                                |
-| 📝 Reactive Forms           | Angular Reactive Forms with dynamic validation                             |
-| 🔄 Shared State             | Global state managed via Services and BehaviorSubjects                     |
-| ⚙️ Optional Backend          | Azure Functions for APIs or server-side logic                              |
-| ☁️ Azure Deployment         | Hosted via Azure Static Web Apps                                           |
+| Feature                  | Description                                                               |
+|--------------------------|---------------------------------------------------------------------------|
+| 🔐 Login Form            | Basic local login or optional Azure B2C integration                       |
+| 👥 Role-Based Views      | Conditional rendering and route protection based on user role             |
+| 🧾 User Management Table | List, create, update, delete users with modals and confirmation dialogs    |
+| 📊 Dashboard Charts      | Visualize metrics using Chart.js or Recharts                              |
+| 📝 Reactive Forms        | Add/edit forms with validation using React Hook Form                      |
+| 🔄 Shared State          | Global state using Zustand or Context with custom hooks                   |
+| ☁️ Azure Deployment      | Hosted with Azure Static Web Apps + Functions (if needed)                 |
+
+---
 
 ## 📦 Folder Structure
 
 admin-dashboard-app/  
+├── public/  
 ├── src/  
-│   ├── app/  
-│   │   ├── auth/  
-│   │   ├── admin/  
-│   │   ├── user/  
-│   │   ├── services/  
-│   │   └── shared/  
-│   └── assets/  
-├── environments/  
-├── angular.json  
-├── tailwind.config.js *(or styles.scss)*  
+│   ├── components/ (ShadCN UI)  
+│   ├── pages/  
+│   ├── routes/  
+│   ├── context/ or stores/  
+│   ├── lib/ (auth, API helpers)  
+│   ├── charts/  
+│   └── App.tsx  
+├── shadcn.config.ts  
+├── tailwind.config.ts  
 ├── .env  
 └── README.md  
+
+---
 
 ## ⚙️ Setup Instructions
 
 1. **Clone the repo**  
-   `git clone https://github.com/yourusername/admin-dashboard-app.git && cd admin-dashboard-app`
+   ```bash
+   git clone https://github.com/yourusername/admin-dashboard-app.git && cd admin-dashboard-app
+   ```
 
 2. **Install dependencies**  
-   `npm install`
+   ```bash
+   npm install
+   ```
 
-3. **Start dev server**  
-   `ng serve`
+3. **Run the dev server**  
+   ```bash
+   npm run dev
+   ```
 
-4. **Configure Azure (Optional)**  
-   - Azure AD B2C settings for login  
-   - Azure Functions for backend APIs
+4. **(Optional)** Set up Azure AD B2C and Azure Functions
 
 5. **Deploy to Azure**  
-   Use Azure Static Web Apps for deployment. Connect repository and follow portal instructions.
+   - Use Azure Static Web Apps  
+   - Optionally deploy Azure Functions for backend logic
+
+---
 
 ## 🧪 Optional Enhancements
 
-- Full auth integration with Azure AD B2C
-- Backend API routes with Azure Functions
-- Dark mode and theme toggling
-- Export user reports as CSV/PDF
+- Dark mode toggle with ShadCN theming
+- JWT-based auth with refresh token logic
+- Export table data to CSV or PDF
+- Admin audit logs and analytics
+
+---
 
 ## 📸 Screenshots
 
-_Add screenshots of login, admin dashboard, and user table views._
+_Add screenshots of login screen, dashboard charts, and user management table._
+
+---
 
 ## 📄 License
 
-MIT — use freely for learning, enterprise demos, or production scaffolds.
+MIT — feel free to fork, expand, and use as a base for internal tools.
